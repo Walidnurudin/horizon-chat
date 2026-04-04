@@ -11,6 +11,6 @@ export class UsersController {
   async findAll(@Request() req: any) {
     const allUsers = await this.usersService.findAll();
     // Exclude the currently logged-in user
-    return allUsers.filter(user => user.id !== req.user.userId);
+    return allUsers.filter((user: any) => user.id !== req.user.userId);
   }
 }
