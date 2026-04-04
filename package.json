@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
+    "build": "turbo build",
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "NEXT_TELEMETRY_DISABLED=1 turbo dev"
   },
