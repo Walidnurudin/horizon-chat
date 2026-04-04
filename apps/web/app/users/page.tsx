@@ -15,7 +15,8 @@ export default function UsersList() {
   useEffect(() => {
     if (!token) return;
 
-    fetch('http://localhost:3001/users', {
+    const apiUrl = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3001';
+    fetch(`${apiUrl}/users`, {
       headers: {
         Authorization: `Bearer ${token}`
       }
