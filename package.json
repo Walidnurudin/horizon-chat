@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "build": "npx prisma generate --schema=apps/api/prisma/schema.prisma && turbo build",
-    "start:prod": "node apps/api/dist/main.js",
+    "build": "turbo build",
+    "start:prod": "npx --yes prisma generate --schema=apps/api/prisma/schema.prisma && node apps/api/dist/main.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "NEXT_TELEMETRY_DISABLED=1 turbo dev"
   },
