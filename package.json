@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "build": "turbo build",
+    "build": "npx prisma generate --schema=apps/api/prisma/schema.prisma && turbo build",
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "NEXT_TELEMETRY_DISABLED=1 turbo dev"
   },
