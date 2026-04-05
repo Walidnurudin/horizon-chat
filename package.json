@@ -4,7 +4,7 @@
   "main": "index.js",
   "scripts": {
     "build": "npx prisma generate --schema=apps/api/prisma/schema.prisma && turbo build",
-    "start:prod": "cd apps/api && npm run start:prod",
+    "start:prod": "node apps/api/dist/main.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "NEXT_TELEMETRY_DISABLED=1 turbo dev"
   },
